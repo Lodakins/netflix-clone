@@ -1,0 +1,11 @@
+<p> <span class="glyphicon glyphicon-heart"></span></p>
+
+<div class="card">
+<img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="{{movie.title}}" class="card-image-top" />
+<div class="card-body">
+    <h5 class="card-title"> Title:{{movie.original_title}} </h5>
+    <h5 class="card-title"> Released Date: {{movie.release_date}}</h5>
+    <upvote (vote)="toggleVote(movie.id)" [voted]="movie.id" [userHasVoted]="userHasVoted(movie.id)"></upvote>
+    <button class="btn btn-primary" [routerLink] ="['/movies',movie.id]"> View More </button>
+    </div>
+</div>

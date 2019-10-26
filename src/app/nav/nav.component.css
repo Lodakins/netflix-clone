@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css?family=Gilda+Display');*/
+
+
+
+/*=================================
+font-family: 'PT Sans', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Gilda Display', serif;
+=====================================*/
+/* ==================================
+ 		Header Section
+ ====================================*/
+.navbar{
+	font-family: 'Quicksand', sans-serif;
+	box-sizing: border-box;
+	background-color:transparent;
+	box-shadow: rgba(0, 0, 0, .2) 0px 4px 12px 0px;
+	padding-top: 10px;
+	padding-bottom: 12px;
+}
+.logo{
+	color: #fff;
+	padding-left: 100px;
+}
+.navbar .navbar-toggler {
+  color: rgba(255,255,255,.9);
+  border-color: rgba(255,255,255,.9);
+  background-color:transparent;
+}
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+/*	background:rgb(255, 255, 255);
+	color:rgb(36, 41, 45);*/
+}
+.search{
+  border-radius: 4px;
+  padding: 8px 20px;
+  color: rgb(255,255,255);
+  background-color: rgb(210, 52, 50);
+  border: 0px;
+  cursor: pointer;
+}
+.navbar-nav{
+	margin-right: 150px;
+}
+.navbar-nav .nav-item{
+	margin: 0 20px;
+	padding-left: 10px;
+	font-size: 14px;
+	color: #ccc;
+}
+.navbar .nav-link{
+     padding-left: 10px;
+    font-size: 14px;
+	color: #fff;
+}
+.nav-item .active{
+	font-size: 14px;
+	color: #fff;
+
+}
+.nav-item  .log{
+	font-size: 14px;
+	border: 1px solid rgb(210, 52, 50);
+	color: rgb(210, 52, 50);
+	border-radius: 10px 10px;
+	padding: 7px;
+	padding-left:20px !important;
+	padding-right: 20px !important;
+}
+.nav-item .sign{
+	font-size: 14px;
+	color: #fff;
+	background-color: rgb(210,52,50);
+	border-radius: 10px 10px;
+	padding: 7px;
+	padding-left:20px !important;
+	padding-right: 20px !important;
+}
+i{
+	color: #666;
+	font-size: 20px;
+}

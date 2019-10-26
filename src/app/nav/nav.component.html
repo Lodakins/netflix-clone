@@ -1,0 +1,27 @@
+<header>
+  <nav class="navbar navbar-expand-sm">
+    <a href="index.html" class="navbar-brand"> <span class="logo"> Ldflix </span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="nav-menu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="index.html" [routerLink]="['movies']"class="nav-link active"> Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" [routerLink]="['favourite']"> Favorite</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link sign" data-toggle="modal" data-target="#signupmodal" aria-hidden="true">Log In</a>
+        </li>
+      </ul>
+      <form  #loginForm="ngForm" (ngSubmit)="searchMovie(loginForm.value)" class="form-inline ">
+          <input class="form-control" type="text" placeholder="Search" (ngModel) ="searchTerm" name="searchTerm">
+          <input class="search mx-3" type="submit" name="search" value="Search" />
+        </form>
+    </div>
+  </nav>
+</header>
