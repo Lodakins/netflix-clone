@@ -3,16 +3,14 @@ import { MovieService } from '../services/movie.service';
 import { ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector:'favourite',
+  selector:'app-favourite',
   template:`
       <div class="container">
         <div class="row">
-          <div class="favourite" >
            <div class="col-md-6" *ngFor="let data of favourite">
               <img src="https://image.tmdb.org/t/p/w500/{{data.poster_path}}" alt="{{data.title}}" class="img-top" />
            </div>
           </div>
-        </div>
       </div>
   `
 })

@@ -8,11 +8,21 @@ import { FavouriteComponent } from '../movies/favourite.component';
 export class MovieService{
 
       favourite:any[]=[];
-
     constructor( private http: HttpClient) {
 
     }
-      favourites = JSON.parse(sessionStorage.getItem('datab'));
+      favourites:any[]=[{
+        id:2,
+        name: 'lolade',
+        school: 'ade'
+      },
+      {
+        id:4,
+        name: 'lolde',
+        school: 'de'
+      }
+    ];
+
 
     getMovieData(){
          return  this.http.get("https://api.themoviedb.org/3/movie/popular?api_key=b312558ff10595355c9cecd84223db0f&language=en-US");
@@ -24,6 +34,7 @@ export class MovieService{
         console.log(id)
         return this.http.get("https://api.themoviedb.org/3/movie/"+ num +"?api_key=b312558ff10595355c9cecd84223db0f&language=en-US");
     }
+
     addToFavourite(id:number){
       let num:string =id.toString();
       this.http.get("https://api.themoviedb.org/3/movie/"+ num +"?api_key=b312558ff10595355c9cecd84223db0f&language=en-US")
@@ -38,6 +49,7 @@ export class MovieService{
 
     getFavouriteData(){
         let subject = new Subject();
+        this.favourites = JSON.parse(sessionStorage.getItem('datab'));
           setTimeout(()=>{
               subject.next(this.favourites);
               subject.complete();
@@ -47,10 +59,9 @@ export class MovieService{
     }
 
     userHasVoted(id:number){
-      console.log(this.favourites);
-      return this.favourites.some(event=>{
-              id === event.id;
-          });
+      return this.favourites.some((ent)=>{
+           return  id === ent.id;
+      });
     }
 
 }

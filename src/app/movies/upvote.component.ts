@@ -20,13 +20,14 @@ import { MovieService} from '../services/movie.service';
 
 export class UpvoteComponent {
 
+  iconColor:string = 'white';
   @Input() voted:any;
   @Output() vote = new EventEmitter();
   @Input() set userHasVoted(val){
-    this.iconColor = val ? 'yellow' : 'red';
+    this.iconColor = val ? 'red' : 'yellow';
 
   }
-        iconColor:string;
+
   onClick() {
     this.vote.emit({});
   }

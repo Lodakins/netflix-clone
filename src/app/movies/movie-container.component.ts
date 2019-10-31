@@ -9,7 +9,7 @@ import { Router, ActivatedRoute} from '@angular/router';
             <hr>
             <div class="container-fluid">
               <div class="row">
-              <div class="col-md-3" *ngFor="let movie of movies" id="thumb">
+              <div class=" col-md-4 col-lg-3" *ngFor="let movie of movies" id="thumb">
                 <movie-thumbnail [movie]="movie"></movie-thumbnail>
               </div>
               </div>

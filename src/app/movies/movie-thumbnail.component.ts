@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import {  MovieService } from '../services/movie.service';
 
 @Component({
-    selector:'movie-thumbnail',
-    templateUrl:'./movie-thumbnail.component.html',
+    selector: 'movie-thumbnail',
+    templateUrl: './movie-thumbnail.component.html',
     styles:[`
         .card{
           margin-bottom: 12px;
@@ -40,9 +40,18 @@ export class MovieThumbnailComponent {
 
      }
 
+     toggleVote(val){
+       console.log(`now in toggle vote \${val}`);
+        console.log(val);
+        console.log(this.userHasVoted);
+       if(!this.userHasVoted(val)){
+         this.moviesService.addToFavourite(val);
+           console.log('ok !!!');
+       }
+     }
       userHasVoted(value){
-       let valued:any = this.moviesService.userHasVoted(value);
-         return valued;
+       let valu =this.moviesService.userHasVoted(value);
+          return valu;
       }
 
 
